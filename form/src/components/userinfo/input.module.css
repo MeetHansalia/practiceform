@@ -1,0 +1,52 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Exo+2&display=swap');
+
+
+
+.input {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+}
+  
+.input label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-family: 'Exo 2', sans-serif;
+
+}
+  
+.input input {
+    font: inherit;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #dee1e2;
+    line-height: 1.5;
+    color: rgb(14, 14, 16);
+    display: block;
+    width: 98%;
+    border: 2px solid #dee1e2;
+    padding: 0.15rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.input input:hover {
+    border-color: #ccc;
+}
+  
+.input input:focus {
+    border-color: #9147ff;
+    background: #fff;
+}
+
+.input label h1{
+    text-align: center;
+}
+
+
