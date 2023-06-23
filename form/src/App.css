@@ -81,9 +81,15 @@ button {
   background-color: #4299e1;
   color: #1a202c;
   border: none;
-  border-radius: 3px;
-  width: 100%;
+  border-radius: 5px;
+  width: 80%;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 2.5rem
+}
+
+input.input-error,
+select.input-error{
+  border-color: #fc8181;
 }
