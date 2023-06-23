@@ -15,10 +15,10 @@ function App() {
     <div className="App">
       <nav>
         <h3 onClick={()=>setView("basic")} style={{color: view === "basic" ? "#fff" : ""}}>
-          Basic
+          Login Form
         </h3>
         <h3 onClick={()=> setView("advanced")} style={{color: view === "advanced" ? "#fff":""}}>
-          Advanced
+          Job Selection
         </h3>        
       </nav>  
       {view === "basic" ? <BasicForm/> : <AdvancedForm/> }    
