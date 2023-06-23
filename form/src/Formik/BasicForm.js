@@ -2,14 +2,17 @@ import { useFormik } from "formik";
 import basicSchema from "../schemas";
 
 
-const onSubmit=(values, action)=>{
+const onSubmit=async(values, action)=>{
     console.log(values);
     console.log(action);
+    await new Promise((resolve)=> setTimeout(resolve, 1000));
+
+    action.resetForm();
 }
 
 const BasicForm =()=>{
 
-    const {values, errors, touched, handleChange, handleBlur, handleSubmit}= useFormik({
+    const {values, errors, touched, isSubmitting, handleChange, handleBlur, handleSubmit}= useFormik({
         initialValues:{
             username:"",
             email:"",
@@ -63,7 +66,7 @@ const BasicForm =()=>{
             <label htmlFor="confirmPassword">Confirm Password</label>
             <input 
                 id="confirmPassword" 
-                type="text" 
+                type="password" 
                 placeholder="Confirm Password"
                 value={values.confirmPassword} 
                 onChange={handleChange} 
@@ -71,7 +74,7 @@ const BasicForm =()=>{
                 className={errors.confirmPassword && touched.confirmPassword ? "input-error" : ""}
             />
             {errors.confirmPassword && touched.confirmPassword && <p className="error">{errors.confirmPassword}</p>} 
-            <button type="submit">Submit</button>
+            <button disabled={isSubmitting} type="submit">Submit</button>
         </form>
     );
 };
